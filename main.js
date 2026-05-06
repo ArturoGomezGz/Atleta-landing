@@ -79,7 +79,7 @@ async function handleForm(e) {
   };
 
   try {
-    await fetch('https://n8n-production-d43c.up.railway.app/webhook-test/acceso-anticipado', {
+    await fetch('https://n8n-production-d43c.up.railway.app/webhook/acceso-anticipado', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
