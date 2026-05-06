@@ -70,10 +70,26 @@ const chartObserver = new IntersectionObserver((entries) => {
 bars.forEach(bar => chartObserver.observe(bar));
 
 // --- Form ---
-function handleForm(e) {
+async function handleForm(e) {
   e.preventDefault();
+  const form = e.target;
+  const data = {
+    nombre: form[0].value,
+    email:  form[1].value,
+  };
+
+  try {
+    await fetch('https://n8n-production-d43c.up.railway.app/webhook-test/acceso-anticipado', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  } catch (err) {
+    console.error('Error al enviar:', err);
+  }
+
   const toast = document.getElementById('toast');
   toast.classList.add('show');
-  e.target.reset();
+  form.reset();
   setTimeout(() => toast.classList.remove('show'), 4500);
 }
