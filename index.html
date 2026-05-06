@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atleta — Software de Evaluación Deportiva para Entrenadores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-mark">A</span>
+        atleta
+      </a>
+      <ul class="nav__links">
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#flujo">Cómo funciona</a></li>
+        <li><a href="#metricas">Métricas</a></li>
+      </ul>
+      <div class="nav__actions">
+<a href="#acceso" class="btn btn--primary btn--sm">Acceso anticipado</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#funciones">Funciones</a>
+      <a href="#flujo">Cómo funciona</a>
+      <a href="#metricas">Métricas</a>
+      <a href="#testimonios">Testimonios</a>
+<a href="#acceso" class="btn btn--primary">Acceso anticipado</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-glow"></div>
+    <div class="container hero__layout">
+
+      <!-- Left -->
+      <div class="hero__copy">
+        <!-- ============================================================
+             TODO: ACTIVAR CUANDO LA BETA ESTÉ LISTA
+             ============================================================ -->
+        <!-- <div class="hero__badge">
+          <span class="badge-dot"></span>
+          Beta disponible para entrenadores
+        </div> -->
+        <h1 class="hero__title">
+          El software que tu sesión<br />
+          de evaluación<br />
+          <span class="hero__title--gradient">merece.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Registra datos de rendimiento en tiempo real, gestiona a múltiples atletas simultáneamente y visualiza el progreso de cada uno con métricas que realmente importan.
+        </p>
+        <div class="hero__actions">
+          <a href="#acceso" class="btn btn--primary btn--lg">
+            Solicitar acceso gratis
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#flujo" class="btn btn--ghost btn--lg">
+            Ver cómo funciona
+          </a>
+        </div>
+        <p class="hero__disclaimer">Sin tarjeta de crédito. Acceso inmediato.</p>
+      </div>
+
+      <!-- Right: App mockup -->
+      <div class="hero__mockup" aria-hidden="true">
+        <div class="mockup-window">
+          <div class="mockup-bar">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+            <span class="mockup-title">Sesión — Evaluación Fuerza · 14 atletas</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-sidebar">
+              <div class="mockup-athlete active">
+                <div class="mockup-avatar">JM</div>
+                <div class="mockup-athlete-info">
+                  <span>Juan M.</span>
+                  <p class="mockup-load-label">80% PR · <strong>112 kg</strong></p>
+                </div>
+              </div>
+              <div class="mockup-athlete">
+                <div class="mockup-avatar">LT</div>
+                <div class="mockup-athlete-info">
+                  <span>Laura T.</span>
+                  <p class="mockup-load-label">85% PR · <strong>119 kg</strong></p>
+                </div>
+              </div>
+              <div class="mockup-athlete">
+                <div class="mockup-avatar">RG</div>
+                <div class="mockup-athlete-info">
+                  <span>Rodrigo G.</span>
+                  <p class="mockup-load-label">75% PR · <strong>90 kg</strong></p>
+                </div>
+              </div>
+              <div class="mockup-athlete">
+                <div class="mockup-avatar">SV</div>
+                <div class="mockup-athlete-info">
+                  <span>Sara V.</span>
+                  <p class="mockup-load-label">90% PR · <strong>135 kg</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-main">
+              <div class="mockup-athlete-header">
+                <div class="mockup-avatar lg">JM</div>
+                <div>
+                  <p class="mockup-name">Juan Martínez</p>
+                  <p class="mockup-exercise">Sentadilla · PR: 140 kg</p>
+                </div>
+                <span class="mockup-pr-pill">80% → <strong>112 kg</strong></span>
+              </div>
+              <div class="mockup-sets">
+                <div class="mockup-set-row header">
+                  <span>Serie</span><span>Reps</span><span>Objetivo</span><span>Estado</span>
+                </div>
+                <div class="mockup-set-row done">
+                  <span>1</span><span>5</span><span>112 kg</span>
+                  <span class="mockup-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="mockup-set-row done">
+                  <span>2</span><span>5</span><span>112 kg</span>
+                  <span class="mockup-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="mockup-set-row done">
+                  <span>3</span><span>5</span><span>112 kg</span>
+                  <span class="mockup-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="mockup-set-row active-row">
+                  <span>4</span><span>5</span>
+                  <span><input class="mockup-input" type="text" value="112 kg" readonly /></span>
+                  <span class="mockup-cursor"></span>
+                </div>
+                <div class="mockup-set-row pending">
+                  <span>5</span><span>5</span><span>112 kg</span>
+                  <span class="mockup-pending-dot"></span>
+                </div>
+              </div>
+              <div class="mockup-actions">
+                <button class="mockup-btn">+ Serie extra</button>
+                <button class="mockup-btn danger">Invalidar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-glow"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="proof-bar">
+    <div class="container proof-bar__inner">
+      <div class="proof-stat">
+        <strong>+200</strong>
+        <span>entrenadores en beta</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <strong>+4,800</strong>
+        <span>atletas registrados</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <strong>+18,000</strong>
+        <span>sesiones completadas</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat">
+        <strong>4.9 <i class="fa-solid fa-star"></i></strong>
+        <span>valoración media</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEMA -->
+  <section class="problem">
+    <div class="container problem__layout">
+      <div class="problem__copy">
+        <span class="section-tag">El problema</span>
+        <h2 class="section-title">El papel y el Excel<br /><span>ya no son suficientes.</span></h2>
+        <p>Llevar una sesión con 10 atletas en paralelo, apuntando en papel o saltando entre hojas de cálculo, es caótico. Pierdes datos, pierdes contexto y pierdes tiempo valioso con cada atleta.</p>
+        <p>Atleta nació para resolver exactamente eso.</p>
+      </div>
+      <div class="problem__cards">
+        <div class="problem-card bad">
+          <i class="fa-solid fa-xmark"></i>
+          <p>Papel y bolígrafo perdidos entre series</p>
+        </div>
+        <div class="problem-card bad">
+          <i class="fa-solid fa-xmark"></i>
+          <p>Excel que no refleja lo que pasa en el gym</p>
+        </div>
+        <div class="problem-card bad">
+          <i class="fa-solid fa-xmark"></i>
+          <p>Sin visibilidad del progreso en tiempo real</p>
+        </div>
+        <div class="problem-card bad">
+          <i class="fa-solid fa-xmark"></i>
+          <p>Flujo lineal que no se adapta a tu sesión</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONES -->
+  <section class="features" id="funciones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Funciones</span>
+        <h2 class="section-title">Todo lo que necesitas.<br /><span>Nada que no.</span></h2>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Captura en tiempo real</h3>
+          <p>Registra series, repeticiones y peso de cada atleta mientras la sesión ocurre. Sin delays, sin pérdida de datos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-shuffle"></i>
+          </div>
+          <h3>Flujo no lineal</h3>
+          <p>Salta entre atletas libremente. No estás forzado a terminar uno para empezar otro — así como pasa en el gym real.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3>Modificaciones sobre la marcha</h3>
+          <p>Agrega series extra, invalida una sin borrarla, o cancela la rutina de un atleta. Todo sin perder el hilo de los demás.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>PR como base de programación</h3>
+          <p>El PR de cada atleta siempre actualizado. Define el porcentaje y la app te da el peso exacto — sin calculadora, sin margen de error.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Gestión por equipos</h3>
+          <p>Organiza tus atletas en equipos. Todos los entrenadores del equipo tienen acceso completo sin jerarquías complicadas.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <h3>Plantillas de rutina</h3>
+          <p>Diseña tus rutinas antes de la sesión. Reutilízalas, adáptalas y ejecútalas cuando decidas sin restricción de horario.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FLUJO -->
+  <section class="flow" id="flujo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cómo funciona</span>
+        <h2 class="section-title">Una sesión de evaluación<br /><span>de principio a fin.</span></h2>
+      </div>
+      <div class="flow__steps">
+
+        <div class="flow-step">
+          <div class="flow-step__num">01</div>
+          <div class="flow-step__body">
+            <h3>Crea la plantilla</h3>
+            <p>Define ejercicios, series y repeticiones objetivo antes de que empiece la acción. Tu plan listo en minutos.</p>
+          </div>
+          <div class="flow-step__connector"></div>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__num">02</div>
+          <div class="flow-step__body">
+            <h3>Inicia la sesión</h3>
+            <p>Arranca cuando quieras. Fecha y hora se registran automáticamente. Sin restricciones de horario.</p>
+          </div>
+          <div class="flow-step__connector"></div>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__num">03</div>
+          <div class="flow-step__body">
+            <h3>Registra en tiempo real</h3>
+            <p>Salta entre atletas, llena datos conforme se ejecutan las series. La app sigue tu ritmo, no al revés.</p>
+          </div>
+          <div class="flow-step__connector"></div>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__num">04</div>
+          <div class="flow-step__body">
+            <h3>Ajusta sobre la marcha</h3>
+            <p>¿Cambio de plan? Agrega series, invalida datos o cancela la rutina de un atleta sin afectar al resto.</p>
+          </div>
+          <div class="flow-step__connector"></div>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__num">05</div>
+          <div class="flow-step__body">
+            <h3>Cierra y analiza</h3>
+            <p>Sesión cerrada, datos almacenados. El historial queda disponible para consulta inmediata.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS -->
+  <section class="metrics" id="metricas">
+    <div class="container metrics__layout">
+      <div class="metrics__copy">
+        <span class="section-tag">Programación basada en datos</span>
+        <h2 class="section-title">El PR: tu referencia<br /><span>siempre al día.</span></h2>
+        <p>El PR no es solo un récord que celebrar — es la <strong>base de toda tu programación</strong>. Con el PR actualizado de cada atleta, Atleta calcula automáticamente las cargas de trabajo para cada sesión.</p>
+        <p>"Hoy toca sentadilla al 80% del PR" deja de ser un cálculo manual para convertirse en un dato listo en pantalla, para cada atleta, en segundos.</p>
+        <ul class="metrics__list">
+          <li><i class="fa-solid fa-check"></i> PR por ejercicio siempre actualizado</li>
+          <li><i class="fa-solid fa-check"></i> Cargas calculadas automáticamente por porcentaje</li>
+          <li><i class="fa-solid fa-check"></i> Cada atleta tiene sus propios números — sin confusiones</li>
+          <li><i class="fa-solid fa-check"></i> El atleta ve sus capacidades actuales en su perfil</li>
+        </ul>
+      </div>
+      <div class="metrics__visual" aria-hidden="true">
+        <div class="metric-card">
+          <div class="metric-card__header">
+            <div class="mockup-avatar lg">LT</div>
+            <div>
+              <p class="metric-name">Laura Torres</p>
+              <p class="metric-exercise">Sentadilla trasera · PR actual: 140 kg</p>
+            </div>
+            <span class="metric-updated">Actualizado hace 5 días</span>
+          </div>
+          <div class="metric-loads">
+            <p class="metric-loads__label">Cargas calculadas</p>
+            <div class="metric-load-row">
+              <span class="load-pct">70%</span>
+              <div class="load-bar-wrap">
+                <div class="load-bar" style="width: 70%"></div>
+              </div>
+              <span class="load-kg">98 kg</span>
+            </div>
+            <div class="metric-load-row">
+              <span class="load-pct">75%</span>
+              <div class="load-bar-wrap">
+                <div class="load-bar" style="width: 75%"></div>
+              </div>
+              <span class="load-kg">105 kg</span>
+            </div>
+            <div class="metric-load-row highlight-row">
+              <span class="load-pct accent">80%</span>
+              <div class="load-bar-wrap">
+                <div class="load-bar accent-bar" style="width: 80%"></div>
+              </div>
+              <span class="load-kg accent">112 kg</span>
+              <span class="load-tag">Sesión de hoy</span>
+            </div>
+            <div class="metric-load-row">
+              <span class="load-pct">85%</span>
+              <div class="load-bar-wrap">
+                <div class="load-bar" style="width: 85%"></div>
+              </div>
+              <span class="load-kg">119 kg</span>
+            </div>
+            <div class="metric-load-row">
+              <span class="load-pct">90%</span>
+              <div class="load-bar-wrap">
+                <div class="load-bar" style="width: 90%"></div>
+              </div>
+              <span class="load-kg">126 kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA / ACCESO -->
+  <section class="cta" id="acceso">
+    <div class="cta__glow"></div>
+    <div class="container cta__content">
+      <span class="section-tag">Acceso anticipado</span>
+      <h2 class="cta__title">
+        Lleva tus sesiones<br />
+        al siguiente nivel.
+      </h2>
+      <p>Únete a los entrenadores que ya están en beta. Gratis durante el período de acceso anticipado.</p>
+      <form class="cta__form" onsubmit="handleForm(event)">
+        <div class="cta__form-row">
+          <input type="text" placeholder="Tu nombre" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <button type="submit" class="btn btn--primary">
+            Solicitar acceso <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <p class="cta__disclaimer">
+          <i class="fa-solid fa-shield-halved"></i>
+          Sin spam. Sin tarjeta de crédito. Cancelable en cualquier momento.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-mark">A</span>
+          atleta
+        </a>
+        <p>Software de seguimiento de progreso deportivo para entrenadores serios.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/arturo_gomez_gomez/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/gomez_artu77445" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/arturo-gomez-b46694301/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Producto</h4>
+        <a href="#funciones">Funciones</a>
+        <a href="#flujo">Cómo funciona</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#acceso">Acceso anticipado</a>
+      </div>
+      <div class="footer__links">
+        <h4>Empresa</h4>
+        <a href="mailto:a07106692@tec.mx" class="footer__email">
+          <i class="fa-solid fa-envelope"></i>
+          a07106692@tec.mx
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Atleta. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>¡Listo! Te contactaremos pronto con tu acceso.</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
